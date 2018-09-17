@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+      <form method='POST' action="{% url 'sign' %}">
+          {% csrf_token %}
+          
+          <div class='form-name' placeholder= 'Name'>
+              <h4>Name</h4>
+              
+               {{ form.name }}  </div>
+
+        <div class='form-message' placeholder='Review'>
+            <p>Enter Review</p>
+            
+            {{ form.message }}</div>
+            <br> 
+            <button type='submit'>Submit</button>
+    
+    </form>
+    </center>
+    </body>
+</html>
